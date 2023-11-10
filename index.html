@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lépésszámláló applikáció</title>
+
+    <link rel="stylesheet" href="Assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="Assets/css/style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            Money Manager Applikáció        
+        </header>
+
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Menü</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                
+                <!-- kijelentkezve -->
+                <ul class="navbar-nav" id="loggedOutMenu">
+                    <li class="nav-item">
+                        <a class="nav-link"  href="#" onclick="">Belépés</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="">Regisztráció</a>
+                    </li>
+                </ul>
+
+                <!-- bejelentkezve -->
+                <ul class="navbar-nav d-none" id="loggedInMenu">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="">Adatfelvitel</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="">Naptár</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="">Táblázat</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick=""; showChart();>Grafikon</a>
+                    </li> 
+                    <li>   
+                        <a class="nav-link" href="#" onclick="">Egyenleg</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" onclick="">Kilépés</a>
+                    </li>     
+                </ul>
+              </div>
+            </div>
+        </nav>
+
+        <main>
+           
+        </main>
+
+    </div>    
+
+    <script src="Assets/js/bootstrap.bundle.min.js"></script>
+    <script src="Assets/js/fullcalendar.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="Assets/js/axios.min.js"></script>
+    <script src="Assets/js/moneymaker.js"></script>
+
+    <!-- Controllers -->
+    <script src="Controllers/register.js"></script>
+    <script src="Controllers/login.js"></script>
+    <script src="Controllers/newdata.js"></script>
+    <script src="Controllers/table.js"></script>
+    <script src="Controllers/calendar.js"></script>
+    <script src="Controllers/chart.js"></script>
+
+
+
+
+</body>
+</html>
