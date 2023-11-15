@@ -25,13 +25,12 @@
                 
                 <ul class="navbar-nav" id="loggedOutMenu">
                     <li class="nav-item">
-                        <a class="nav-link"  href="#" onclick="">Belépés</a>
+                        <a class="nav-link"  href="#" onclick="render('login')">Belépés</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" onclick="">Regisztráció</a>
+                        <a class="nav-link" onclick="render('register')" href="#">Regisztráció</a>
                     </li>
                 </ul>
-
                 <ul class="navbar-nav d-none" id="loggedInMenu">
                     <li class="nav-item">
                         <a class="nav-link" href="#" onclick="">Adatfelvitel</a>
@@ -65,6 +64,10 @@
     <script src="Assets/js/bootstrap.bundle.min.js"></script>
     <script src="Assets/js/axios.min.js"></script>
     <script src="Assets/js/moneymaker.js"></script>
+    <script src="Assets/js/app.js"></script>
+
+    <script src="Controllers/register.js"></script>
+
 
 </body>
 </html>
