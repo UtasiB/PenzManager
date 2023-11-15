@@ -25,12 +25,17 @@
                 
                 <ul class="navbar-nav" id="loggedOutMenu">
                     <li class="nav-item">
-                        <a class="nav-link"  href="#" onclick="render('login')">Belépés</a>
+<<<<<<< Updated upstream
+                        <a class="nav-link"  href="#" onclick="">Belépés</a>
+=======
+                        <a class="nav-link" onclick="render('login')" href="#">Belépés</a>
+>>>>>>> Stashed changes
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" onclick="render('register')" href="#">Regisztráció</a>
+                        <a class="nav-link" href="#" onclick="">Regisztráció</a>
                     </li>
                 </ul>
+
                 <ul class="navbar-nav d-none" id="loggedInMenu">
                     <li class="nav-item">
                         <a class="nav-link" href="#" onclick="">Adatfelvitel</a>
@@ -42,14 +47,14 @@
                         <a class="nav-link" href="#" onclick="">Táblázat</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" onclick=""; showChart();>Grafikon</a>
+                        <a class="nav-link" href="#" onclick="">Grafikon</a>
                     </li> 
-                    <li>   
+                    <li class="nav-item">   
                         <a class="nav-link" href="#" onclick="">Egyenleg</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" onclick="">Kilépés</a>
-                    </li>     
+                        <a class="nav-link" href="#" onclick="logout()">Kilépés</a>
+                    </li>   
                 </ul>
               </div>
             </div>
@@ -63,10 +68,10 @@
 
     <script src="Assets/js/bootstrap.bundle.min.js"></script>
     <script src="Assets/js/axios.min.js"></script>
-    <script src="Assets/js/moneymaker.js"></script>
     <script src="Assets/js/app.js"></script>
 
     <script src="Controllers/register.js"></script>
+    <script src="Controllers/login.js"></script>
 
 
 </body>
