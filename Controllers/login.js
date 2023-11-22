@@ -1,4 +1,4 @@
-function login(){
+function Login(){
     let email = document.querySelector('#email');
     let passwd = document.querySelector('#jelszo');
 

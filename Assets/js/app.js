@@ -1,5 +1,8 @@
 const serverURL = 'http://localhost:5000';
 
+let loggedInMenu = document.querySelector('#loggedInMenu');
+let loggedOutMenu = document.querySelector('#loggedOutMenu');
+
 async function render(view){
     let main = document.querySelector('main');
     main.innerHTML = await (await fetch(`Views/${view}.html`)).text();
@@ -11,4 +14,17 @@ function showMessage(msg){
     alertBox.classList.remove('d-none');
 }
 
-render('login')
+let loggedUser = JSON.parse(sessionStorage.getItem('MoneyManagerAppUser'));
+
+if (loggedUser != null){
+    loggedOutMenu.classList.add('d-none');
+    loggedInMenu.classList.remove('d-none');
+    render('newdata');
+}
+else
+{
+    loggedInMenu.classList.add('d-none');
+    loggedOutMenu.classList.remove('d-none');
+    render('login');
+}
+
