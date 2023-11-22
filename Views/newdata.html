@@ -1,0 +1,29 @@
+<h3 class="mb-3">Adatrögzítés</h3>
+
+<div class="alert alert-danger d-none" role="alert" id="alertBox">
+</div>
+
+<div class="form-floating mb-3">
+    <input type="email" class="form-control" id="tag" placeholder="">
+    <label for="tag">Kategória</label>
+  </div>
+
+<div class="form-floating mb-3">
+    <input type="date" class="form-control" id="date" placeholder="" max="">
+    <label for="date">Dátum</label>
+</div>
+
+<div class="form-floating mb-3">
+    <select class="form-select" id="bevORkia" aria-label="Floating label select example">
+      <option value="0">Bevétel</option>
+      <option value="1">Kiadás</option>
+    </select>
+    <label for="floatingSelect">Bevétel vagy Kiadás?</label>
+  </div>
+
+<div class="form-floating mb-3">
+    <input type="number" class="form-control" id="osszeg" placeholder="" min="0" value="0">
+    <label for="osszeg">Összeg</label>
+</div>
+
+<button class="btn btn-primary mb-3" onclick="addMoney()">Rögzítés</button>

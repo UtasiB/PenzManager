@@ -22,7 +22,7 @@ if (loggedUser != null){
     render('newdata');
 }
 else
-{
+    {
     loggedInMenu.classList.add('d-none');
     loggedOutMenu.classList.remove('d-none');
     render('login');
