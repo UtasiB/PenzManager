@@ -12,10 +12,7 @@ function addMoney(){
     let date = document.querySelector('#date');
     let osszeg = document.querySelector('#osszeg');
     let bevORkia = document.querySelector('#bevORkia');
-    if(bevORkia.value == 1) 
-    {
-        osszeg * -1;
-    }
+ 
 
     axios.get(`${serverURL}/users/ID/eq/${loggedUser.ID}`).then(res=>{
         let upID = -1;

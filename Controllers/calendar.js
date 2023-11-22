@@ -3,13 +3,29 @@ function showCalendar(){
     let myEvents = [];
     axios.get(`${serverURL}/items/userID/eq/${loggedUser.ID}`).then(res=>{
         res.data.forEach(item => {
-            myEvents.push({
-                title: item.steps,
-                start: item.date,
-                allDay: true,
-                backgroundColor: '#336c56',
-                borderColor: '#336c56',
-            })
+            let osszeg = item.amount;
+            console.log(item.type == 1)
+            if(item.type == 1){
+                osszeg = item.amount*-1;
+            }
+            if(osszeg < 0){
+                myEvents.push({
+                    title: item.tag + " ("+osszeg+")",
+                    start: item.date,
+                    allDay: true,
+                    backgroundColor: '#FF0000',
+                    borderColor: '#000000',
+                })
+            }
+            else{
+                myEvents.push({
+                    title: item.tag + " ("+osszeg+")",
+                    start: item.date,
+                    allDay: true,
+                    backgroundColor: '#336c56',
+                    borderColor: '#000000',
+                })
+            }
         });
     });
 
