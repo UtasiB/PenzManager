@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2023. Nov 15. 09:04
--- Kiszolgáló verziója: 10.4.6-MariaDB
--- PHP verzió: 7.3.8
+-- Létrehozás ideje: 2023. Nov 24. 11:50
+-- Kiszolgáló verziója: 10.4.32-MariaDB
+-- PHP verzió: 8.0.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -34,8 +33,16 @@ CREATE TABLE `items` (
   `date` date NOT NULL,
   `amount` int(11) NOT NULL,
   `type` tinyint(1) NOT NULL,
-  `tag` varchar(250) COLLATE utf8_hungarian_ci NOT NULL
+  `tag` varchar(250) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
+
+--
+-- A tábla adatainak kiíratása `items`
+--
+
+INSERT INTO `items` (`ID`, `userID`, `date`, `amount`, `type`, `tag`) VALUES
+(8, 3, '2023-11-24', 5000, 1, 'Evés'),
+(9, 3, '2023-11-23', 200000, 0, 'Fizetés');
 
 -- --------------------------------------------------------
 
@@ -45,10 +52,17 @@ CREATE TABLE `items` (
 
 CREATE TABLE `users` (
   `ID` int(11) NOT NULL,
-  `name` varchar(255) COLLATE utf8_hungarian_ci NOT NULL,
-  `email` varchar(255) COLLATE utf8_hungarian_ci NOT NULL,
-  `passwd` varchar(255) COLLATE utf8_hungarian_ci NOT NULL
+  `name` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `passwd` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
+
+--
+-- A tábla adatainak kiíratása `users`
+--
+
+INSERT INTO `users` (`ID`, `name`, `email`, `passwd`) VALUES
+(3, 'Csoki', 'csoki@gmail.com', '123');
 
 --
 -- Indexek a kiírt táblákhoz
@@ -75,13 +89,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT a táblához `items`
 --
 ALTER TABLE `items`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT a táblához `users`
 --
 ALTER TABLE `users`
-  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Megkötések a kiírt táblákhoz

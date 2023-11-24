@@ -27,8 +27,8 @@ function registerUser()
                     email: email.value,
                     passwd: jelszo.value
                 };
-                axios.post(`${serverURL}/users`, newUser).then(res =>{
-                    alertBox('Siker regisztáció! Mostmár beléphetsz!')
+                axios.post(`${serverURL}/users`, newUser).then(res =>{      
+                    showMessage('Siker regisztáció! Mostmár beléphetsz!')
                         document.location.href = "index.html"
                 })
             }

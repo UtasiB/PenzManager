@@ -11,7 +11,7 @@ async function render(view){
 function showMessage(msg){
     let alertBox = document.querySelector('#alertBox');
     alertBox.innerHTML = `<strong>HIBA!</strong> ${msg}`;
-    alertBox.classList.remove('d-none');
+    alertBox.classList.remove('d-none');    
 }
 
 let loggedUser = JSON.parse(sessionStorage.getItem('MoneyManagerAppUser'));

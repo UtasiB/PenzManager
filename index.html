@@ -40,13 +40,13 @@
                         <a class="nav-link" href="#" onclick="render('calendar'); showCalendar()">Naptár</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" onclick="">Táblázat</a>
-                    </li>
+                        <a class="nav-link" href="#" onclick="render('table'); renderTable()">Táblázat</a>
+                    </li>       
                     <li class="nav-item">
-                        <a class="nav-link" href="#" onclick="">Grafikon</a>
+                        <a class="nav-link" href="#" onclick="render('barchart'); renderBarChart()">Grafikon</a>
                     </li> 
                     <li class="nav-item">   
-                        <a class="nav-link" href="#" onclick="">Egyenleg</a>
+                        <a class="nav-link" href="#" onclick="render('linechart'); renderLineChartTimeout();">Egyenleg</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#" onclick="logout()">Kilépés</a>
@@ -66,11 +66,16 @@
     <script src="Assets/js/axios.min.js"></script>
     <script src="Assets/js/app.js"></script>
     <script src="Assets/js/fullcalendar.min.js"></script>
+    <script src="Assets/js/chart.js"></script>
 
     <script src="Controllers/register.js"></script>
     <script src="Controllers/login.js"></script>
     <script src="Controllers/newdata.js"></script>
     <script src="Controllers/calendar.js"></script>
+    <script src="Controllers/table.js"></script>
+    <script src="Controllers/barchart.js"></script>
+    <script src="Controllers/linechart.js"></script>
+
 
 </body>
 </html>
